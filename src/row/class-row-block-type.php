@@ -30,6 +30,8 @@ if ( ! class_exists( '\WP_Bootstrap_Blocks\Row\Row_Block_Type', false ) ) :
 		/**
 		 * Block attributes.
 		 *
+		 * 'anchor' needs to be added because of: https://github.com/WordPress/gutenberg/issues/6356#issuecomment-419170257
+		 * 
 		 * @var array
 		 */
 		protected $attributes = array(
