@@ -57,6 +57,9 @@ if ( ! class_exists( '\WP_Bootstrap_Blocks\Row\Row_Block_Type', false ) ) :
 			'cssGridGutters' => array(
 				'type' => 'string',
 			),
+			'anchor' => array( 
+				'type' => 'string',
+			),
 		);
 
 		/**

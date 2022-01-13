@@ -87,7 +87,13 @@ if ( array_key_exists( 'verticalAlignment', $attributes ) ) {
  * @param array $attributes Block attributes.
  */
 $classes = apply_filters( 'wp_bootstrap_blocks_row_classes', $classes, $attributes );
+
+$anchor = "";
+if ( array_key_exists( 'anchor', $attributes ) && !empty( $attributes['anchor'] ) ) {
+	$anchor = 'id="' . esc_attr( $attributes['anchor'] ) . '"';
+}
 ?>
-<div class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>">
+
+<div <?php echo $anchor; ?> class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>">
 	<?php echo $content; // phpcs:ignore ?>
 </div>

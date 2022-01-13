@@ -29,6 +29,7 @@ registerBlockType( 'wp-bootstrap-blocks/row', {
 
 	supports: {
 		align: [ 'full' ],
+		anchor: true,
 	},
 
 	transforms,
