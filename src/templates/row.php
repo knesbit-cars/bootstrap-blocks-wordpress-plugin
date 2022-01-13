@@ -90,10 +90,11 @@ $classes = apply_filters( 'wp_bootstrap_blocks_row_classes', $classes, $attribut
 
 $anchor = "";
 if ( array_key_exists( 'anchor', $attributes ) && !empty( $attributes['anchor'] ) ) {
-	$anchor = 'id="' . esc_attr( $attributes['anchor'] ) . '"';
+	$anchor = 'id="' . esc_attr( $attributes['anchor'] ) . '" ';
 }
-?>
 
-<div <?php echo $anchor; ?> class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>">
+$divAttributes = $anchor . 'class="' . esc_attr( implode( ' ', $classes ) ) . '"'
+?>
+<div <?php echo $divAttributes; ?>>
 	<?php echo $content; // phpcs:ignore ?>
 </div>
